@@ -1,0 +1,71 @@
+export const data = {
+    "users": [
+        {
+            "name": "Aarav Reva",
+            "mailid": "aarav@mail.com",
+            "role": "Manager"
+        },
+        {
+            "name": "Arun Mahinder",
+            "mailid": "arun@mail.com",
+            "role": "HR"
+        },
+        {
+            "name": "Amrit Jai",
+            "mailid": "amrit@mail.com",
+            "role": "Security"
+        }
+    ],
+    "approvals": [
+        {
+            "name": "Priti Reva",
+            "reason": "Interview",
+            "whom": "Aarav",
+            "status": "Approved",
+            "idproof": "Aadhar",
+            "image": "images/photo.png"
+        }, {
+            "name": "Ayaan Mahinder",
+            "reason": "Official",
+            "whom": "Arun",
+            "status": "Approved",
+            "idproof": "Pan",
+            "image": "images/photo.png"
+        }, {
+            "name": "Diya Jai",
+            "reason": "Marketing",
+            "whom": "Amrit",
+            "status": "Pending",
+            "idproof": "Voters ID",
+            "image": "images/photo.png"
+        }, {
+            "name": "Puneet Reena",
+            "reason": "Interview",
+            "whom": "Amithi",
+            "status": "Pending",
+            "idproof": "Passport",
+            "image": "images/photo.png"
+        }, {
+            "name": "Arti Nirupama",
+            "reason": "Official",
+            "whom": "Aarav",
+            "status": "Rejected",
+            "idproof": "Driving Licence",
+            "image": "images/photo.png"
+        }, {
+            "name": "Dipali Sukhbir",
+            "reason": "Marketing",
+            "whom": "Arun",
+            "status": "Pending",
+            "idproof": "Aadhar",
+            "image": "images/photo.png"
+        }, {
+            "name": "Sanjay Manjula",
+            "reason": "Marketing",
+            "whom": "Aarav",
+            "status": "Approved",
+            "idproof": "Aadhar",
+            "image": "images/photo.png"
+        }
+    ]
+}

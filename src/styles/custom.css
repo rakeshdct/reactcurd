@@ -1,0 +1,76 @@
+.main-panel {
+  width: calc(100%);
+}
+
+input[type="password"]+.alert {
+  margin-top: 25px;
+}
+
+.table-striped thead tr {
+  background-color: #4B49AC;
+  color: #fff;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: transparent;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+  background-color: #F5F7FF;
+}
+
+.calendar .btn {
+  border-color: #dae0e5;
+  cursor: default !important;
+}
+
+#generateReport .modal-dialog {
+  max-width: 1024px;
+}
+
+#generateReport .table-responsive {
+  margin: 35px 0 0;
+  padding: 35px 0 0;
+  border-top: 1px solid #CED4DA;
+}
+
+.modal .modal-dialog .modal-content .modal-header {
+  padding: 15px 26px;
+}
+
+#deleteUser.modal .modal-dialog .modal-content .modal-body {
+  padding: 35px 26px 0;
+}
+
+#deleteUser .modal-footer {
+  border-top: 0;
+}
+
+.fa-edit,
+.fa-trash-o {
+  cursor: pointer;
+}
+
+.photoWrap {
+  width: 200px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 250px;
+  border: 1px solid#CED4DA;
+  position: relative;
+  overflow: hidden;
+}
+
+.photoWrap img {
+  width: auto !important;
+  height: 100% !important;
+  border-radius: 0 !important;
+}
+
+.photoWrap span {
+  position: absolute;
+}
