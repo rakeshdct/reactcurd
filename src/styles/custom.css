@@ -75,6 +75,10 @@ input[type="password"]+.alert {
   position: absolute;
 }
 
+.photoWrap video {
+  height: 100%;
+}
+
 .photoWrap.hide video,
 .photoWrap img{
   display: none;
