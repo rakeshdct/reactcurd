@@ -80,9 +80,14 @@ input[type="password"]+.alert {
 }
 
 .photoWrap.hide video,
-.photoWrap img{
+.photoWrap img {
   display: none;
 }
-.photoWrap.hide img{
+
+.photoWrap.hide img {
   display: inline;
+}
+#defaultModal .alert ,
+#addUser .alert {
+  margin: 20px 0 0;
 }

@@ -8,7 +8,11 @@ const WebcamCapture = () => {
     const capture = React.useCallback((e) => {
         const imageSrc = webcamRef.current.getScreenshot();
         setImgSrc(imageSrc);
-    }, [webcamRef, setImgSrc]);
+        if (imgSrc !== null) {
+            const fileInput = document.getElementById('myFile');
+            fileInput.dataTransfer.files = imgSrc;
+        }
+    }, [webcamRef, setImgSrc, imgSrc]);
 
     return (
         <>
@@ -23,7 +27,9 @@ const WebcamCapture = () => {
                         src={imgSrc} alt=""
                     />
                 )}
-                <input type="file" id="myFile" name="filename" src={imgSrc} className='file-upload-default' />
+                {imgSrc != null &&
+                    <input type="hidden" id="photo" value={imgSrc} />}
+
             </div>
             <div className="text-center">
                 <div className="btn btn-primary btn-sm mr-2" onClick={capture}>Capture photo</div>
