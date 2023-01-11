@@ -1,4 +1,6 @@
 import React from 'react'
+import WebcamCapture from './webcamCapture'
+
 
 const NewEntryDetails = () => {
     return (
@@ -13,11 +15,9 @@ const NewEntryDetails = () => {
                         </button>
                     </div>
                     <div className="modal-body">
-
                         <form className="forms-sample">
-                            <div>
-                                <div className="photoWrap mb-4"><img src="images/photo.png" alt='' /><span>Upload Photo here</span>
-                                </div>
+                            <div className="form-group">
+                                <WebcamCapture />                                
                             </div>
                             <div className="form-group">
                                 <input type="text" className="form-control" id="exampleInputUsername1" placeholder="Name" />
@@ -40,15 +40,14 @@ const NewEntryDetails = () => {
                                 </select>
                             </div>
                         </form>
-
                     </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-light" data-bs-dismiss="modal">Cancel</button>
                         <button type="button" className="btn btn-primary">Submit</button>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     )
 }
 

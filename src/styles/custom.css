@@ -74,3 +74,11 @@ input[type="password"]+.alert {
 .photoWrap span {
   position: absolute;
 }
+
+.photoWrap.hide video,
+.photoWrap img{
+  display: none;
+}
+.photoWrap.hide img{
+  display: inline;
+}
