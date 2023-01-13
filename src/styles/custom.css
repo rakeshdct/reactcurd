@@ -87,7 +87,12 @@ input[type="password"]+.alert {
 .photoWrap.hide img {
   display: inline;
 }
-#defaultModal .alert ,
+
+#defaultModal .alert,
 #addUser .alert {
   margin: 20px 0 0;
+}
+
+#profileDetails .photoWrap img {
+  display: inline;
 }

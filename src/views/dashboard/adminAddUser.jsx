@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux';
+import { editCurrentUserdata, adminListUserSelector } from "./adminListUser-dux";
 
 const AdminAddUser = () => {
+    const dispatch = useDispatch();
+    const { adminListUserData, editCurrentUser } = useSelector(adminListUserSelector);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [role, setRole] = useState('Select Role');
@@ -8,8 +12,14 @@ const AdminAddUser = () => {
     const [errMsg, setErrMsg] = useState('');
     var emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
     useEffect(() => {
+        if (editCurrentUser !== "") {
+            setName(adminListUserData[editCurrentUser].name)
+            setEmail(adminListUserData[editCurrentUser].mailid)
+            setRole(adminListUserData[editCurrentUser].role)
+            setpwd(adminListUserData[editCurrentUser].password)
+        }
         setErrMsg('');
-    }, [name, email, role, pwd])
+    }, [name, email, role, pwd, editCurrentUser, adminListUserData])
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -26,6 +36,7 @@ const AdminAddUser = () => {
         setRole('Select Role')
         setpwd('')
         setErrMsg('')
+        dispatch(editCurrentUserdata(""))
     }
     return (
         <div className="modal fade" id="addUser" tabIndex="-1" role="dialog" aria-hidden="true">
@@ -33,7 +44,7 @@ const AdminAddUser = () => {
                 <form className="forms-sample" onSubmit={handleSubmit}>
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title font-weight-bold" id="exampleModalLabel">Add / Edit User</h5>
+                            <h5 className="modal-title font-weight-bold" id="exampleModalLabel">{editCurrentUser === "" ? "Add" : "Edit User"}</h5>
                             <button onClick={clearFields} type="button" className="close" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">×</span>
                             </button>
@@ -63,7 +74,7 @@ const AdminAddUser = () => {
                         </div>
                         <div className="modal-footer">
                             <button type="button" onClick={clearFields} className="btn btn-light" data-bs-dismiss="modal">Cancel</button>
-                            <button type="submit" className="btn btn-primary">Submit</button>
+                            {editCurrentUser === "" ? <button type="submit" className="btn btn-primary">Submit</button> : <button type="submit" className="btn btn-primary">Update</button>}
                         </div>
                     </div>
                 </form>

@@ -1,0 +1,22 @@
+{
+    "adminListUserData": [
+        {
+            "name": "Aarav Reva",
+            "mailid": "aarav@mail.com",
+            "role": "Manager",
+            "password": "1234"
+        },
+        {
+            "name": "Arun Mahinder",
+            "mailid": "arun@mail.com",
+            "role": "HR",
+            "password": "4567"
+        },
+        {
+            "name": "Amrit Jai",
+            "mailid": "amrit@mail.com",
+            "role": "Security",
+            "password": "8910"
+        }
+    ]
+}

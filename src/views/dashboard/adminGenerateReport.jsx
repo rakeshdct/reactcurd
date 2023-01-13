@@ -50,7 +50,7 @@ const AdminGenerateReport = () => {
                                         <input type="date" id="toDate" className="form-control" placeholder="To" max={todayDate} />
                                     </div>
                                 </div>
-                                <div className="col-lg-4 ">
+                                <div className="col-lg-4 mb-3 ">
                                     <button type="button" onClick={handleClick} className="btn btn-primary">Generate</button>
                                 </div>
                                 {errMsg &&
